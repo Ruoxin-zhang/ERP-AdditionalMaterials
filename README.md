@@ -15,12 +15,6 @@ These materials are provided to ensure **full reproducibility** of the dissertat
 │   ├── pca_index/             # Composite index construction (PCA)
 │   └── regression/            # OLS/SEM regressions and spatial analysis
 │
-├── data_sources/              # Data access and preprocessing documentation
-│   ├── OSM_data.md
-│   ├── GRDI_data.md
-│   ├── WorldPop_data.md
-│   └── GADM_data.md
-│
 ├── outputs/                   # Selected analytical outputs (for verification)
 │   ├── ghana_composite_index.csv
 │   ├── uganda_composite_index.csv
@@ -128,6 +122,6 @@ These can be compared against newly generated results to verify reproducibility.
 ## 5. Notes
 
 - **Data Availability:** Only metadata and sample files are provided. Full datasets must be re-downloaded from the original sources.
-- **Dependencies:** Code tested with Python 3.10, QGIS 3.42.
+- **Dependencies:** Install dependencies using pip install -r requirements.txt. Versions reflect those used during the dissertation; later versions may also work but could produce minor differences.
 - **Disclaimer:** Results are reproducible using open data; however, small variations may occur if analyses are re-run at a later date due to updated OSM/WorldPop datasets.
 - **Contact:** *ruoxin.zhang@student.manchester.ac.uk*
