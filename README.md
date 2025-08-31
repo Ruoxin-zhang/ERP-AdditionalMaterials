@@ -89,20 +89,22 @@ Raw datasets are **not included** in this repository.
 1. **Preprocess data (read gpkg, compute accessibility indicators):**
 
    ```
-   python code/data_preprocessing/run_ghana_poi_index.py
-   python code/data_preprocessing/run_uganda_poi_index.py
+   python Code/Ghana/Ghana_SingleIndex.ipynb
+   python Code/Uganda/Uganda_SingleIndex.ipynb
    ```
 
 2. **Construct composite index (PCA):**
 
    ```
-   python code/pca_index/make_composite_index_geo.py
+   python Code/Ghana/Ghana_CompositeIndex.ipynb
+   python Code/Uganda/Uganda_CompositeIndex.ipynb
    ```
 
 3. **Run regression and spatial analysis (OLS/SEM):**
 
    ```
-   python code/regression/run_spatial_regression.py
+   python python Code/Ghana/Ghana_RegressionandSpatialModelling.ipynb
+   python python Code/Uganda/Uganda_RegressionandSpatialModelling.ipynb
    ```
 
 ------
