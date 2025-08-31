@@ -1,0 +1,2 @@
+target,intercept,slope,R_squared,p_value,equation
+GRDI_MEAN,86.2201,-1.0828,0.799,9.13E-92,GRDI_MEAN = 86.2201 - 1.0828 × CompositeIndex
