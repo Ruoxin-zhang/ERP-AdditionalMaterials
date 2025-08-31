@@ -1,4 +1,4 @@
-# ERP-AdditionalMaterials
+# Additional Materials for ERP Dissertation
 
 **Title:** Mapping urban infrastructure access and exploring its relationship with deprivation using open data  
 **Author:** Ruoxin Zhang  
@@ -6,6 +6,129 @@
 **Submission Date:** 1 September 2025  
 
 ## 1. Purpose
-These additional materials are provided to ensure **full reproducibility** of the ERP dissertation research.  
+These materials are provided to ensure **full reproducibility** of the dissertation.  
 
 ## 2. Repository Structure
+## 2. Repository Structure
+```text
+├── code/                      # Python scripts for data processing and modelling
+│   ├── data_preprocessing/    # Read QGIS-processed gpkg and compute indicators
+│   ├── pca_index/             # Composite index construction (PCA)
+│   └── regression/            # OLS/SEM regressions and spatial analysis
+│
+├── data_sources/              # Data access and preprocessing documentation
+│   ├── OSM_data.md
+│   ├── GRDI_data.md
+│   ├── WorldPop_data.md
+│   └── GADM_data.md
+│
+├── outputs/                   # Selected analytical outputs (for verification)
+│   ├── ghana_composite_index.csv
+│   ├── uganda_composite_index.csv
+│   ├── ghana_regression_results.txt
+│   └── uganda_regression_results.txt
+│
+├── docs/
+│   └── Technical_Appendix.pdf # Detailed step-by-step workflow
+│
+├── requirements.txt           # Python dependencies
+└── README.md                  # This file
+```
+
+## 3. How to Reproduce
+### 3.1 Environment Setup
+Install Python (tested with **Python 3.10**) and required libraries:  
+```bash
+conda create -n urban python=3.10
+conda activate urban
+pip install -r requirements.txt
+```
+
+### 3.2 Data Preparation
+
+Raw datasets are **not included** in this repository.
+ They can be obtained from the following open sources (see `data_sources/` for detailed instructions):
+
+- **OpenStreetMap (OSM):** POIs via Geofabrik 
+
+  Ghana: https://download.geofabrik.de/africa/ghana.html
+
+  Uganda: https://download.geofabrik.de/africa/uganda.html
+
+- **GRDI:** [Global Relative Deprivation Index v1, NASA/CIESIN](https://doi.org/10.7927/3xxe-ap97?utm_source=chatgpt.com)
+
+- **WorldPop:** Constrained individual countries 2020 UN adjusted (100m resolution)
+
+  Ghana: https://hub.worldpop.org/geodata/summary?id=49691
+
+  Uganda: https://hub.worldpop.org/geodata/summary?id=49721
+
+  UN adjusted, constrained
+
+- **GADM:** Administrative boundaries (Level-2)
+
+  Ghana: https://gadm.org/download_country.html#google_vignette
+
+  Uganda: https://gadm.org/download_country.html#google_vignette
+
+**Preprocessing:**
+
+- Select specific infrastructure POIs:
+  - Education
+  - Health Care
+  - Commerce
+  - Green Space
+  - Public Transport
+
+- ToolBox: Point on Surface
+
+- ToolBox: Delete Duplicate Geometries
+
+- OSM POIs were cleaned and reprojected in **QGIS** into projected CRS:
+
+  - Ghana → EPSG:32630 (UTM Zone 30N)
+  - Uganda → EPSG:32636 (UTM Zone 36N)
+
+- Exported as `.gpkg` (e.g., `shop_reprojected.gpkg`) for use in Python.
+
+### 3.3 Run the Analysis
+
+1. **Preprocess data (read gpkg, compute accessibility indicators):**
+
+   ```
+   python code/data_preprocessing/run_ghana_poi_index.py
+   python code/data_preprocessing/run_uganda_poi_index.py
+   ```
+
+2. **Construct composite index (PCA):**
+
+   ```
+   python code/pca_index/make_composite_index_geo.py
+   ```
+
+3. **Run regression and spatial analysis (OLS/SEM):**
+
+   ```
+   python code/regression/run_spatial_regression.py
+   ```
+
+------
+
+## 4. Verification
+
+The `outputs/` folder contains selected analytical results corresponding to the dissertation:
+
+- Composite index for Ghana and Uganda
+- Regression outputs (OLS/SEM)
+
+These can be compared against newly generated results to verify reproducibility.
+ Minor discrepancies may occur if data are re-downloaded, due to OSM/WorldPop updates or stochastic variation in PCA.
+
+------
+
+## 5. Notes
+
+- **Data Availability:** Only metadata and sample files are provided. Full datasets must be re-downloaded from the original sources.
+- **Dependencies:** Code tested with Python 3.10, QGIS 3.42.
+- **Disclaimer:** Results are reproducible using open data; however, small variations may occur if analyses are re-run at a later date due to updated OSM/WorldPop datasets.
+- **Contact:** *ruoxin.zhang@student.manchester.ac.uk*
