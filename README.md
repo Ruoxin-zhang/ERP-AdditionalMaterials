@@ -15,10 +15,8 @@ These materials are provided to ensure **full reproducibility** of the dissertat
 │   └── Uganda/           
 │
 ├── outputs/                   # Selected analytical outputs (for verification)
-│   ├── ghana_composite_index.csv
-│   ├── uganda_composite_index.csv
-│   ├── ghana_regression_results.txt
-│   └── uganda_regression_results.txt
+│   ├── Ghana/
+│   ├── Uganda/
 │
 ├── docs/
 │   └── Technical_Appendix.pdf # Detailed step-by-step workflow
