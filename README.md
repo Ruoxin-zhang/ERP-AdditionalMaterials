@@ -9,7 +9,6 @@
 These materials are provided to ensure **full reproducibility** of the dissertation.  
 
 ## 2. Repository Structure
-## 2. Repository Structure
 ```text
 ├── code/                      # Python scripts for data processing and modelling
 │   ├── data_preprocessing/    # Read QGIS-processed gpkg and compute indicators
@@ -63,7 +62,7 @@ Raw datasets are **not included** in this repository.
 
   Uganda: https://hub.worldpop.org/geodata/summary?id=49721
 
-  UN adjusted, constrained
+  used for population weighting of infrastructure accessibility
 
 - **GADM:** Administrative boundaries (Level-2)
 
@@ -80,9 +79,9 @@ Raw datasets are **not included** in this repository.
   - Green Space
   - Public Transport
 
-- ToolBox: Point on Surface
+- Vector Geometry → Point on Surface
 
-- ToolBox: Delete Duplicate Geometries
+- Vector general → Delete Duplicate Geometries
 
 - OSM POIs were cleaned and reprojected in **QGIS** into projected CRS:
 
