@@ -10,10 +10,9 @@ These materials are provided to ensure **full reproducibility** of the dissertat
 
 ## 2. Repository Structure
 ```text
-├── code/                      # Python scripts for data processing and modelling
-│   ├── data_preprocessing/    # Read QGIS-processed gpkg and compute indicators
-│   ├── pca_index/             # Composite index construction (PCA)
-│   └── regression/            # OLS/SEM regressions and spatial analysis
+├── code/                      # Jupter book scripts for data processing and modelling
+│   ├── Ghana/    
+│   └── Uganda/           
 │
 ├── outputs/                   # Selected analytical outputs (for verification)
 │   ├── ghana_composite_index.csv
@@ -84,27 +83,27 @@ Raw datasets are **not included** in this repository.
 
 - Exported as `.gpkg` (e.g., `shop_reprojected.gpkg`) for use in Python.
 
-### 3.3 Run the Analysis
+### 3.3 Run the Analysis (The analysis is organised into Jupyter Notebooks)
 
 1. **Preprocess data (read gpkg, compute accessibility indicators):**
 
    ```
-   python Code/Ghana/Ghana_SingleIndex.ipynb
-   python Code/Uganda/Uganda_SingleIndex.ipynb
+   jupyter notebook Code/Ghana/Ghana_SingleIndex.ipynb
+   jupyter notebook Code/Uganda/Uganda_SingleIndex.ipynb
    ```
 
 2. **Construct composite index (PCA):**
 
    ```
-   python Code/Ghana/Ghana_CompositeIndex.ipynb
-   python Code/Uganda/Uganda_CompositeIndex.ipynb
+   jupyter notebook Code/Ghana/Ghana_CompositeIndex.ipynb
+   jupyter notebook Code/Uganda/Uganda_CompositeIndex.ipynb
    ```
 
 3. **Run regression and spatial analysis (OLS/SEM):**
 
    ```
-   python Code/Ghana/Ghana_RegressionandSpatialModelling.ipynb
-   python Code/Uganda/Uganda_RegressionandSpatialModelling.ipynb
+   jupyter notebook Code/Ghana/Ghana_RegressionandSpatialModelling.ipynb
+   jupyter notebook Code/Uganda/Uganda_RegressionandSpatialModelling.ipynb
    ```
 
 ------
