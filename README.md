@@ -103,8 +103,8 @@ Raw datasets are **not included** in this repository.
 3. **Run regression and spatial analysis (OLS/SEM):**
 
    ```
-   python python Code/Ghana/Ghana_RegressionandSpatialModelling.ipynb
-   python python Code/Uganda/Uganda_RegressionandSpatialModelling.ipynb
+   python Code/Ghana/Ghana_RegressionandSpatialModelling.ipynb
+   python Code/Uganda/Uganda_RegressionandSpatialModelling.ipynb
    ```
 
 ------
