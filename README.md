@@ -70,10 +70,6 @@ Raw datasets are **not included** in this repository.
   - Green Space
   - Public Transport
 
-- Vector Geometry → Point on Surface
-
-- Vector general → Delete Duplicate Geometries
-
 - OSM POIs were cleaned and reprojected in **QGIS** into projected CRS:
 
   - Ghana → EPSG:32630 (UTM Zone 30N)
