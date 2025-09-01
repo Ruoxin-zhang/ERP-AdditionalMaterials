@@ -119,4 +119,4 @@ These can be compared against newly generated results to verify reproducibility.
 - **Data Availability:** Only metadata and sample files are provided. Full datasets must be re-downloaded from the original sources.
 - **Dependencies:** Install dependencies using pip install -r requirements.txt. Versions reflect those used during the dissertation; later versions may also work but could produce minor differences.
 - **Disclaimer:** Results are reproducible using open data; however, small variations may occur if analyses are re-run at a later date due to updated OSM/WorldPop datasets.
-- **Contact:** *ruoxin.zhang@postgrad.manchester.ac.uk*
+
