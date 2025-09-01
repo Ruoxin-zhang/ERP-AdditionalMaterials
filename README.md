@@ -19,7 +19,7 @@ These materials are provided to ensure **full reproducibility** of the dissertat
 │   ├── Uganda/
 │
 ├── docs/
-│   └── Technical_Appendix.pdf # Detailed step-by-step workflow
+│   └── Technical_Handbook.pdf # Detailed step-by-step workflow
 │
 ├── requirements.txt           # Python dependencies
 └── README.md                  # This file
